@@ -1,6 +1,27 @@
-# SideScrollerBP
-UE5 Side Scroller template (Blueprint) for SOFT8009 Game Development.
+# 2.5D Side Scroller Game 
+## Submission for game development module of 2.5D side scroller game.
 
-This template is a modification of the Third Person Template that ships with Unreal Engine 5. It is inspired by the "How to make a 2.5D Platformer in Unreal Engine 5 - Beginner Tutorial" video on YouTube by "Cobra Code". See https://www.youtube.com/watch?v=ZGQoo9frBUA. Some modifications have been made, such as using the newer Enhanced Input feature of UE5 and modifying some values.
+### Demo Video: https://youtu.be/mxr357uOOUw
+### Level Implementation Document: https://docs.google.com/document/d/1TX6LYuLNOK66BMfgWPZahDHyiFaYtOa3XVtX-B8XY9k/edit?usp=sharing
+### Game Design Document: https://docs.google.com/document/d/1P_L89YBDwbe0_Mr9Y7qPHgfiYx4X9nar0czgyRTc9NQ/edit?usp=sharing
 
-This template is a good starting point for 2.5D games with a fixed x-axis. Modify variables such as walk speed, gravity, camera offset and more to get it exactly how you want. Depending on the verticality of your level design, you may want to set the LockHeight boolean (in the camera manager blueprint) to true when there is no verticality or false to allow the camera to follow the player character as it ascends or descends. You may also consider moving the camara manager blueprint along a spline if you want more precise control over camera height.
+---
+
+The demo level takes place in a dorm room, where the player character is a mechanical dummy attached to a rail system, restricting movement to slow, left-to-right movements in 3D space. There are no other actors in the scene. The door of the dorm is locked with a three-digit combination lock, which the player must solve to pass the level.
+
+The room contains two interactable objects, that display these clues:
+
+- A photo frame, which shows the following riddle:  
+    "Within this frame, a memory hides,  
+    A secret waits where truth resides.  
+    But only a shift in sight will show,  
+    What lies beneath, for you to know."
+    
+- A computer, which shows another riddle:  
+    "Keys aren’t just for locks and doors,  
+    Some command, while others store.  
+    To shift your view and set things right,  
+    Press the key that brings text to light."
+    
+
+These riddles hint at a hidden mechanic - pressing the right shift key. When activated, this changes the game's saturation, revealing a hidden code on the dorm room wall - 792. The player must input this code into the door lock to successfully complete the level.
